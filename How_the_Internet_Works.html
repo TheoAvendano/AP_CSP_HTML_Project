@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <TITLE>How the Internet Works</TITLE>
+    <link rel="icon" href="images/link.ico" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #FAEBD7; /* #f0f0f0; /* Body background color */
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.5em;
+            color: #1e1e1e;             
+            margin: 50px; /* Margins */
+            padding: 10px; /* Padding */
+        }
+
+        h1 {
+            text-align: center;   
+        }
+
+        h2 {
+            text-align: center;   
+        }
+
+        div {
+            background-color: #e0f7fa; /* Paragraph background color */
+            padding: 15px 15px 10px 15px ; /* Padding inside paragraph */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #3b3b3b;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #000000;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #1e6697;
+            font-size: 18px;
+        }
+
+
+        .cd__main{
+            max-width: 720px !important;
+        }
+
+        img
+        {
+            max-width: 480px;
+            height: auto;
+        }
+
+        .image-left, .image-right
+        {
+            margin: 1em 0;
+            background-color: #ffffff;
+        }
+
+        @media (min-width: 20em)
+        {
+            .image-left, .image-right
+            {
+                display: flex;
+                align-items: center;
+            }
+
+            .image-left img
+            {
+
+                margin-right: 1em;
+                float: left; /* fallback */
+            }
+
+            .image-right img
+            {
+                order: 1;
+                margin-left: 1em;
+                float: right; /* fallback */
+            }
+            
+            /* clearfix for fallback */
+            .image-left::after,
+            .image-right::after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+
+        @media (min-width: 30em)
+        {
+            .image-left img, .image-right img
+            {
+                flex-shrink: 0;
+            }
+        }
+    </style>    
+    </head>
+    <body>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Routers_Redundancy_Packets.html">Routers, Redundancy, and Packets</a></li>
+            <li><a href="HTTP_DNS.html">HTTP and DNS</a></li>
+            <li><a class="active" href="How_the_Internet_Works.html">How the Internet Works</a></li>
+            <li style="float:right" ><a href="https://github.com/TheoAvendano/AP_CSP_HTML_Project">GitHub Repository</a></li>
+        </ul>
+        <br>
+        <script>
+            function over_function() {
+              document.getElementById("main_title").innerHTML = "=^_^= How the Internet Works =^_^=";
+            }
+            function leave_function() {
+              document.getElementById("main_title").innerHTML = "{-_-} How the Internet Works {-_-}";
+            }
+        </script> 
+        <H1 id='main_title' onmouseover="over_function()" onmouseleave="leave_function()" >How the Internet Works</H1>
+        <!--
+        <IMG src="images/worker.gif" alt="Worker" style="width:100%;max-width:400px;">
+        <IMG src="images/under-construction90s.gif" alt="Worker" style="width:100%;max-width:400px;">
+        -->
+        <br>
+        <h2>The Internet: A Global Network of Connections</h2>
+        <div class="image-left">
+            <img src="images/Internet-60-seconds.gif" alt="Internet-60-seconds">
+            <div>
+                <p>The Internet is a massive global network that connects millions of computers, devices, and servers. It allows people to communicate, share information, and access resources from anywhere in the world. This vast system works by linking smaller networks together, forming one huge web of connections. As long as you have an Internet connection, you can interact with other devices, making the Internet a powerful tool for collaboration and communication.</p>
+                <p>The Internet operates on a decentralized model, meaning no single organization controls the entire network. Instead, it is made up of various networks that cooperate and follow common rules to ensure data can be shared. This structure ensures the Internet is resilient and can function even when parts of it experience issues. This decentralization also means anyone can connect to the Internet and exchange information without relying on a central authority.</p>
+                <p>One of the main benefits of the Internet is its accessibility. Whether you're using a computer, smartphone, or tablet, you can connect to the Internet and access an endless range of services, from email to streaming video. This has revolutionized industries such as education, entertainment, and healthcare, allowing people to access information and services in ways that were previously unimaginable. The Internet has become a fundamental part of our daily lives.</p>
+            </div>
+        </div>
+        <div class="image-right">
+            <img src="images/internet-real-time-infographic.gif" alt="Internet-60-seconds">
+            <div>
+                <p>Another major feature of the Internet is that it is constantly evolving. From dial-up connections in the early days to high-speed fiber-optic networks, the way we connect to the Internet has improved dramatically. These advancements have allowed more people to access the Internet, with faster speeds and more reliable connections, making it even more essential to our everyday routines. As technology continues to evolve, so will the Internet, bringing new possibilities for communication and innovation.</p>
+                <p>In essence, the Internet is much more than just a tool for browsing websites or sending emails. It serves as a critical infrastructure that underpins much of modern society, influencing nearly every aspect of daily life. The Internet connects people across the globe, facilitates innovation in countless industries, and drives global economies forward. Its impact is so widespread and integrated into our lives that it’s hard to imagine functioning without it today.</p>
+            </div>
+        </div>
+        <br>
+        <h2>How Information Moves: The Journey of Data</h2>
+        <div class="image-left">
+            <img src="images/MOC_GIFO_INTERNET1.gif" alt="Data Journey">
+            <div>
+                <p>The Internet functions by breaking down information into small pieces called packets, which travel across networks. When you send an email or load a web page, the data is split into these packets and routed to its destination. Each packet may take a different route across the Internet, and once they arrive, they are reassembled into the original message or page. This packet-switching system is what allows the Internet to be fast, efficient, and reliable.</p>
+                <p>Routers are key devices that direct packets across the Internet. They determine the best path for each packet to take, based on current network conditions. If one route is congested or down, the router will choose an alternative path, ensuring the data reaches its destination. This dynamic routing process helps keep the Internet running smoothly, even during periods of heavy traffic or technical issues.</p>
+                <p>Redundancy is another important concept that ensures the reliability of the Internet. Redundancy means that there are multiple ways for data to travel between two points. If one path fails, the data can simply take another route. This ensures that even if part of the network experiences a problem, the overall system remains operational, making the Internet highly resilient to failures.</p>
+            </div>
+        </div>
+        <div class="image-right">
+            <img src="images/Data Journey cropped.png" alt="Data Journey">
+            <div>
+                <p>One reason the Internet is so fast is because data is sent in packets across multiple routes simultaneously. Rather than transmitting an entire file at once, small pieces of it are sent separately and reassembled at their destination. This approach allows for faster and more efficient data transfer, reducing delays. It’s how the Internet can handle large amounts of data across a vast global network.</p>
+                <p>The journey of data across the Internet may seem complex, but it happens in milliseconds. Whether you are streaming a video, sending a message, or browsing a website, packets of data travel quickly between devices. These packets zip across different routes, ensuring fast and reliable communication. This behind-the-scenes process is what makes the Internet capable of handling our everyday tasks smoothly.</p>
+            </div>
+        </div>
+        <br>
+        <h2>Core Protocols: The Internet's Backbone</h2>
+        <div class="image-left">
+            <img src="images/Popular Network Protocols.gif" alt="Popular Network Protocols">
+            <div>
+                <p>At the heart of the Internet are protocols, which are sets of rules that allow devices to communicate with one another. One of the most important protocols is TCP/IP (Transmission Control Protocol/Internet Protocol), which breaks data into packets and ensures they reach their destination. TCP ensures that packets are sent in the correct order, while IP handles addressing and routing. Together, they form the foundation of how the Internet functions, making sure data is transmitted reliably and accurately.</p>
+                <p>Another crucial protocol is HTTP (HyperText Transfer Protocol), which allows web browsers and servers to communicate. When you visit a website, your browser sends a request to the server using HTTP, asking for the content of a webpage. The server responds by sending back the requested information, which your browser then displays. HTTP is what makes it possible for you to browse the web and view websites, playing a key role in the World Wide Web.</p>
+                <p>The Domain Name System (DNS) is often referred to as the "address book" of the Internet. DNS converts human-readable domain names, like www.example.com, into numerical IP addresses that computers use to identify each other. This process allows you to access websites without needing to remember complex strings of numbers. DNS is a fundamental part of how the Internet works, making it easier for people to navigate and use.</p>
+                <p>While these protocols are essential, they are invisible to most users. You don’t have to think about how TCP/IP or DNS works when you browse the web or send an email. However, without these underlying rules, the Internet would not function as seamlessly as it does today. They are the unsung heroes that keep everything running behind the scenes.</p>
+                <p>Protocols like TCP/IP, HTTP, and DNS are the foundation of how the Internet functions. They regulate how data is transferred, how devices find each other, and how websites are accessed. Without these protocols, our ability to communicate and interact on the Internet would collapse. They ensure that data moves efficiently and securely across the web.</p>
+            </div>
+        </div>
+        <br>
+        <h2>The Future of Connectivity: What Lies Ahead</h2>
+        <div class="image-right">
+            <img src="images/future-internet-wordle-640.jpg" alt="Future Internet Wordle">
+            <div>
+                <p>The Internet is constantly evolving, with new technologies pushing its limits. One of the biggest developments is the rise of 5G networks, which promise faster speeds and lower latency than ever before. 5G will enable new innovations like smart cities, autonomous vehicles, and enhanced virtual reality experiences. As more devices become connected to the Internet, 5G will be key to handling the increased demand for speed and data.</p>
+                <p>Another trend shaping the future of the Internet is the expansion of the Internet of Things (IoT). IoT refers to everyday objects, like appliances and vehicles, that are connected to the Internet and can communicate with each other. This technology is transforming industries such as healthcare, agriculture, and manufacturing by allowing devices to share data and perform tasks automatically. As IoT continues to grow, the Internet will play an even bigger role in our daily lives.</p>
+                <p>Cybersecurity is also a major focus as the Internet continues to evolve. With more data being shared online, protecting personal information and preventing cyberattacks is becoming increasingly important. Advances in encryption, two-factor authentication, and other security measures are being developed to keep the Internet safe for users. The future of the Internet will likely involve balancing innovation with stronger security practices to ensure that it remains a trusted platform.</p>
+            </div>
+        </div>
+        <div class="image-left">
+            <img src="images/futureinternet-15-00166-g009.png" alt="Future Internet Wordle">
+            <div>
+                <p>Cloud computing is another area that is shaping the future of the Internet. Instead of storing data locally on individual devices, cloud computing allows users to store and access information over the Internet. This makes it easier to collaborate, share files, and run applications from anywhere with an Internet connection. As cloud services expand, more businesses and individuals are relying on the Internet to store and manage their digital content.</p>
+                <p>The Internet will continue evolving, changing how we live, work, and connect. Future advancements could include faster networks, more connected devices, and enhanced cybersecurity measures. Technologies like cloud services and the Internet of Things will reshape the way we interact with the digital world. The future holds immense potential for an even more connected, efficient Internet.</p>
+            </div>
+        </div>
+    </body>
+</html>

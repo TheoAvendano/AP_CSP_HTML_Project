@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP and DNS</title>
+    <style>
+        body {
+            background-color: #FAEBD7; /* #f0f0f0; /* Body background color */
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.5em;
+            color: #1e1e1e;             
+            margin: 50px; /* Margins */
+            padding: 10px; /* Padding */
+        }
+
+        h1 {
+            text-align: center;   
+        }
+
+        h2 {
+            text-align: center;   
+        }
+
+        div {
+            background-color: #e0f7fa; /* Paragraph background color */
+            padding: 15px 15px 10px 15px ; /* Padding inside paragraph */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #3b3b3b;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #000000;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #1e6697;
+            font-size: 18px;
+        }
+
+
+        .cd__main{
+            max-width: 720px !important;
+        }
+
+        img
+        {
+            max-width: 480px;
+            height: auto;
+        }
+
+        .image-left, .image-right
+        {
+            margin: 1em 0;
+            background-color: #ffffff;
+        }
+
+        @media (min-width: 20em)
+        {
+            .image-left, .image-right
+            {
+                display: flex;
+                align-items: center;
+            }
+
+            .image-left img
+            {
+
+                margin-right: 1em;
+                float: left; /* fallback */
+            }
+
+            .image-right img
+            {
+                order: 1;
+                margin-left: 1em;
+                float: right; /* fallback */
+            }
+            
+            /* clearfix for fallback */
+            .image-left::after,
+            .image-right::after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+
+        @media (min-width: 30em)
+        {
+            .image-left img, .image-right img
+            {
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Routers_Redundancy_Packets.html">Routers, Redundancy, and Packets</a></li>
+        <li><a class="active" href="HTTP_DNS.html">HTTP and DNS</a></li>
+        <li><a  href="How_the_Internet_Works.html">How the Internet Works</a></li>
+        <li style="float:right" ><a href="https://github.com/TheoAvendano/AP_CSP_HTML_Project">GitHub Repository</a></li>
+    </ul>
+    <br>
+    <script>
+        function over_function() {
+          document.getElementById("main_title").innerHTML = "=^_^= HTTP and DNS =^_^=";
+        }
+        function leave_function() {
+          document.getElementById("main_title").innerHTML = "{-_-} HTTP and DNS {-_-}";
+        }
+    </script> 
+    <H1 id='main_title' onmouseover="over_function()" onmouseleave="leave_function()" >HTTP and DNS</H1>
+        <br>
+        <h2>HTTP: How Web Browsers and Servers Communicate</h2>
+        <div class="image-left">
+	        <img src="images/browsers.jpeg" alt="Modern Web Browsers">
+	        <div>
+                <p> HTTP (HyperText Transfer Protocol) is the foundation of how web browsers and servers communicate. When you enter a web address, your browser sends an HTTP request to the server hosting the website. The server responds by sending the website’s content, like text and images, back to your browser. This exchange happens quickly, allowing you to see the web page almost instantly.</p>
+                <p> HTTP uses a client-server model, meaning your browser (the client) makes requests, and the server provides the necessary data. This simple structure makes the internet easy to use and helps ensure a smooth transfer of information. Each HTTP request is treated separately, meaning the server doesn’t remember past interactions. This allows the web to function efficiently, but it also means websites need other tools like cookies to remember user data.</p>
+            </div>
+        </div>
+        <div class="image-right" >
+	        <img src="images/HTTP_Request.png" alt="HTTP Request">
+            <div>
+                <p> One key feature of HTTP is that it’s stateless, which means each request is independent of previous ones. The server doesn’t store information about what you did on the site before, unless extra technology like cookies or sessions is used. This design helps keep things fast, but it’s why you might have to log in again when you visit different pages. Even though it’s stateless, HTTP is reliable for delivering website content.</p>
+                <p> Over time, HTTP has been upgraded to HTTPS, which adds encryption for secure communication. The "S" stands for "Secure," and it helps protect sensitive information like passwords and credit card details. Most websites today use HTTPS, making it safer to browse the web and conduct online transactions. You can tell a website uses HTTPS by the padlock symbol in your browser’s address bar.</p>
+                <p> In summary, HTTP is the protocol that makes browsing the web possible by allowing communication between browsers and servers. Its simplicity and stateless nature make it efficient, while newer versions like HTTPS improve security. Without HTTP, websites wouldn’t be able to deliver content so quickly and reliably. It’s a crucial part of what makes the internet work.</p>
+            </div>
+        </div>
+        <br>
+        <h2>DNS: Translating Web Addresses into IPs</h2>
+        <div class="image-left">
+	        <img src="images/DNS.jpg" alt="Domain Name System">
+	        <div>
+                <p>DNS (Domain Name System) is like the internet’s phonebook, helping convert website names into numerical IP addresses. When you type in a website like www.example.com, DNS translates that name into a number that computers use to locate the site. Without DNS, you’d have to remember complex strings of numbers to visit any website. This translation makes the web much easier for users.</p>
+            </div>
+        </div>
+        <div class="image-right">
+	        <img src="images/How_DNS_Works cropped.gif" alt="How DNS works">
+	        <div>
+                <p>DNS servers handle this process of matching domain names with IP addresses. When you request a web page, your computer contacts a DNS server to find the correct IP address. Once the DNS server provides the IP address, your browser can load the site. This all happens quickly in the background, so you usually don’t even notice it.</p>
+                <p>The DNS system is distributed across many servers around the world, which means no single server handles all the requests. If one DNS server doesn’t know the answer, it can ask others to find the right IP address. This decentralized setup makes DNS fast, reliable, and resilient against failures. It’s an efficient way to handle the millions of requests made every second on the internet.</p>
+                <p>DNS also plays an important role in keeping the internet secure. With tools like DNSSEC (DNS Security Extensions), it ensures that the responses you get are authentic and haven’t been tampered with. This protects users from attacks where hackers might try to send them to fake websites. DNSSEC is crucial in making sure the web remains a safe place to navigate.</p>
+                <p>In conclusion, DNS is essential for making the internet user-friendly by allowing people to use simple names for websites instead of numerical addresses. It operates behind the scenes, handling requests quickly and efficiently. Its distributed structure and security measures keep the internet reliable and safe. Without DNS, using the internet would be much more complicated for everyday users.</p>
+            </div>
+        </div>
+</body>
+</html>

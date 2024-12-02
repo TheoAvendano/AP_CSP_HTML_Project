@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routers, Redundancy, and Packets</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            background-color: #FAEBD7; /* #f0f0f0; /* Body background color */
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.5em;
+            color: #1e1e1e;             
+            margin: 50px; /* Margins */
+            padding: 10px; /* Padding */
+        }
+
+        h1 {
+            text-align: center;   
+        }
+
+        h2 {
+            text-align: center;   
+        }
+
+        div {
+            background-color: #e0f7fa; /* Paragraph background color */
+            padding: 15px 15px 10px 15px ; /* Padding inside paragraph */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #3b3b3b;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #000000;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #1e6697;
+            font-size: 18px;
+        }
+
+
+        .cd__main{
+            max-width: 720px !important;
+        }
+
+        img
+        {
+            max-width: 480px;
+            height: auto;
+        }
+
+        .image-left, .image-right
+        {
+            margin: 1em 0;
+            background-color: #ffffff;
+        }
+
+        @media (min-width: 20em)
+        {
+            .image-left, .image-right
+            {
+                display: flex;
+                align-items: center;
+            }
+
+            .image-left img
+            {
+
+                margin-right: 1em;
+                float: left; /* fallback */
+            }
+
+            .image-right img
+            {
+                order: 1;
+                margin-left: 1em;
+                float: right; /* fallback */
+            }
+            
+            /* clearfix for fallback */
+            .image-left::after,
+            .image-right::after
+            {
+                content: "";
+                display: block;
+                clear: both;
+            }
+        }
+
+        @media (min-width: 30em)
+        {
+            .image-left img, .image-right img
+            {
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active"href="Routers_Redundancy_Packets.html">Routers, Redundancy, and Packets</a></li>
+        <li><a href="HTTP_DNS.html">HTTP and DNS</a></li>
+        <li><a href="How_the_Internet_Works.html">How the Internet Works</a></li>
+        <li style="float:right" ><a href="https://github.com/TheoAvendano/AP_CSP_HTML_Project">GitHub Repository</a></li>
+    </ul>
+    <br>
+    <script>
+        function over_function() {
+          document.getElementById("main_title").innerHTML = "=^_^= Routers, Redundancy, and Packets =^_^=";
+        }
+        function leave_function() {
+          document.getElementById("main_title").innerHTML = "{-_-} Routers, Redundancy, and Packets {-_-}";
+        }
+    </script> 
+    <H1 id='main_title' onmouseover="over_function()" onmouseleave="leave_function()" >Routers, Redundancy, and Packets</H1>
+        <br>
+        <h2>How Routers Guide Internet Traffic</h2>
+        <div class="image-left">
+	        <img src="images/Peplink Enterprise Router.png" alt="Modern Web Browsers">
+	        <div>
+                <p>Routers are devices that help direct data between different networks, making it possible for devices like computers, phones, and tablets to communicate with one another. When you send information across the Internet, like loading a webpage, your request first passes through a router. The router's job is to figure out the best path for your data to travel, so it reaches its destination as quickly as possible. Without routers, different networks wouldn't be able to communicate, and the Internet wouldn't work as smoothly as it does today.</p>
+                <p>Routers don't just connect computers; they also link together entire networks. For example, your home router connects your devices (like laptops, phones, and smart TVs) to the Internet, while large routers at Internet service providers manage data across global networks. Each router has an address, and when data is sent, the router forwards it to the next destination using this address. This process ensures that your data reaches the correct location, whether you're sending an email or streaming a video.</p>
+            </div>
+        </div>
+        <div class="image-right" >
+            <img src="images/Router_Animated.gif" alt="HTTP Request">
+            <div>
+                <p>One key feature of routers is that they can handle large amounts of data. Instead of just moving data blindly, routers analyze the traffic they handle and make intelligent decisions about where to send it. They look for the fastest and most efficient route, especially if one part of the network is slow or not working well. This makes sure that the Internet runs quickly, even when many people are using it at the same time.</p>
+                <p>Routers also help improve the security of networks by controlling what data comes in and out. Most home routers have firewalls built into them, which block harmful or unauthorized traffic from entering your network. This keeps your personal information safe from hackers or malicious software trying to access your devices. Essentially, routers act as both a guide and a protector for your Internet traffic.</p>
+                <p>In larger networks, such as those used by businesses or schools, multiple routers work together to direct traffic. These routers cooperate to manage the flow of data efficiently, ensuring that everyone connected to the network has a fast and reliable connection. By splitting the workload, routers help prevent network congestion, where too much data slows everything down. This teamwork between routers keeps the Internet running smoothly and quickly, even when many devices are connected.</p>
+            </div>
+        </div>
+        <br>
+        <h2>The Importance of Redundancy in Networks</h2>
+        <div class="image-left">
+	        <img src="images/LAN Switching with Redundant Links.gif" alt="Modern Web Browsers">
+	        <div>
+                <p>Redundancy in the context of the Internet means having backup systems or multiple pathways for data to travel in case something goes wrong. Imagine you're driving to a destination, but there's a roadblock ahead—redundancy is like having another road you can take to still get where you're going. In the same way, if one part of the network fails, redundancy ensures that data can take another route to reach its destination. This keeps the Internet reliable and helps prevent major disruptions.</p>
+                <p>Redundancy is important because the Internet is made up of millions of connections, and not all of them work perfectly all the time. There could be technical failures, cable damage, or heavy traffic that slow down or block certain parts of the network. By having multiple ways for data to travel, redundancy makes sure that even if one connection fails, the data can still reach its destination using a different path. This helps the Internet stay up and running, even during technical problems.</p>
+            </div>
+        </div>
+        <div class="image-right" >
+            <img src="images/Round-Robin Algorithm.gif" alt="HTTP Request">
+            <div>    
+                <p>One example of redundancy is having multiple servers host the same website. If one server crashes, the other can still handle the requests, so the website remains accessible. Redundancy also applies to data storage, where important information is copied and saved in multiple places. This way, if one storage system fails, the data can be recovered from the backup, preventing data loss.</p>
+                <p>Another benefit of redundancy is that it improves network performance. When there are multiple paths for data to take, it can choose the fastest or least congested one. This means that even if one part of the Internet is slow, your data can bypass that section and still reach its destination quickly. Redundancy helps reduce delays and keeps things running smoothly, especially when many people are online at the same time.</p>
+                <p>In short, redundancy makes the Internet more reliable, secure, and efficient. By having backups and alternative routes, it ensures that data is delivered even when problems arise. This is essential for both everyday users and businesses that rely on constant, uninterrupted Internet access. Redundancy plays a big role in keeping the Internet dependable and fast.</p>
+            </div>
+        </div>
+        <br>
+        <h2>How Data Packets Keep the Internet Running</h2>
+        <div class="image-left">
+	        <img src="images/Packet Traveling.gif" alt="Modern Web Browsers">
+	        <div>
+                <p>Packets are small pieces of data that travel across the Internet from one device to another. When you send a message, download a file, or load a webpage, the data isn't sent as one big chunk. Instead, it's broken down into smaller, manageable packets that move independently across the network. Each packet contains part of the data you're sending, as well as important information about where it's going and how to put it back together.</p>
+                <p>Think of packets like puzzle pieces that fit together to create a complete picture. Each packet might take a different path to its destination, depending on traffic and network conditions. Once all the packets arrive, they're reassembled in the correct order to display the full webpage or complete the message. This method makes sending data more efficient and allows the Internet to handle lots of information at the same time.</p>
+            </div>
+        </div>
+        <div class="image-right" >
+            <img src="images/IP packet.svg" alt="HTTP Request">
+            <div>    
+                <p>One advantage of using packets is that they can be sent through different routes, which helps avoid congestion. If one part of the network is busy or broken, the packets can take alternative paths to get to their destination. This ensures that the data gets where it needs to go, even if the network is experiencing delays or problems. Packets make the Internet more flexible and adaptable, allowing it to keep running smoothly even under heavy use.</p>
+                <p>Packets also allow for error checking and recovery. If a packet gets lost or damaged on its way, the system can request that only the missing packet be resent, instead of sending the entire file again. This makes the process more efficient and reduces the amount of data that needs to be transferred. By using packets, the Internet can ensure that data is delivered accurately and efficiently.</p>
+                <p>Finally, packets are essential for streaming services, online gaming, and other real-time applications. These activities require data to be sent continuously and in small bursts, making packets ideal for the job. Without packets, it would be harder to watch videos or play games smoothly online. Packets are a crucial part of how the Internet works, helping to deliver information quickly and reliably.</p>
+
+            </div>
+        </div>
+</body>
+</html>

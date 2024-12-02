@@ -4,36 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction to the Internet</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
     <style>
         body {
-            background-color: #90EE90;      /* #f0f0f0; /* Body background color */
-            font-family: Arial, sans-serif; /* Font */
+            background-color: #FAEBD7; /* #f0f0f0; /* Body background color */
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 1.5em;
+            color: #1e1e1e;
+            text-align: center;                
             margin: 20px; /* Margins */
             padding: 10px; /* Padding */
         }
-        p {
+        div {
             background-color: #e0f7fa; /* Paragraph background color */
             padding: 15px; /* Padding inside paragraph */
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #3b3b3b;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #ffffff;
+            border-left: 1px solid #ffffff;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #000000;
+            font-size: 17px;
+        }
+
+        .active {
+            background-color: #1e6697;
+            font-size: 18px;
+        }
+
+        #rcorners2 {
+        border-radius: 25px;
+        border: 2px solid #1e6697;
+        padding: 8px; 
+        width: 828px;
+        height: 148px;  
+        }
+
+        .center {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73AD21;
+        padding: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Introduction to the Internet</h1>
-    
-    <!-- Insert my image or gif -->
-    <img src="images/under_construction.png" alt="Under construction" style="width:100%;max-width:400px;">
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="Routers_Redundancy_Packets.html">Routers, Redundancy, and Packets</a></li>
+        <li><a href="HTTP_DNS.html">HTTP and DNS</a></li>
+        <li><a  href="How_the_Internet_Works.html">How the Internet Works</a></li>
+        <li style="float:right" ><a href="https://github.com/TheoAvendano/AP_CSP_HTML_Project">GitHub Repository</a></li>
+    </ul>
+    <br>
+    <script>
+        function over_function() {
+          document.getElementById("main_title").innerHTML = "=^_^= Introduction to the Internet =^_^=";
+        }
+        function leave_function() {
+          document.getElementById("main_title").innerHTML = "{-_-} Introduction to the Internet {-_-}";
+        }
+    </script> 
+    <H1 id='main_title' onmouseover="over_function()" onmouseleave="leave_function()" >Introduction to the Internet</H1>
+
+    <img src="images/internet_global.jpg" alt="Internet Global" style="width:100%;max-width:800px;">
     
     <h2>What is the Internet?</h2>
-    <p>
-        The Internet is a global network of interconnected computers that allows users to share information and communicate with each other. It works by transmitting data through a system of servers and routers using a variety of protocols, including HTTP, TCP/IP, and DNS. The Internet enables access to vast amounts of information, websites, and services, such as email, social media, and online shopping. It is decentralized, meaning no single entity controls it, and it continues to evolve as new technologies and uses emerge.
-        <!-- Placeholder for my 4-5 sentence explanation of what the Internet is -->
+    <div id="rcorners2" class="center">
+    <p>The Internet is a global network of computers that 
+        are connected to each other, allowing people to share information 
+        and communicate across the world. It works by sending data in small 
+        packets through cables and wireless connections to reach different 
+        devices. Websites, emails, videos, and apps all use the Internet 
+        to function. People use it for a wide variety of activities, from 
+        learning and working to entertainment and socializing. Essentially, 
+        it's a huge system that helps us stay connected and find information 
+        quickly.
     </p>
-    
-    <h2>Explore More</h2>
-    <ul>
-        <li><a href="RRandP.html">Resources, Roles, and People</a></li>
-        <li><a href="HTTPandDNS.html">HTTP and DNS</a></li>
-        <li><a href="TBD.html">To Be Decided</a></li>
-    </ul>
+    </div>
 </body>
 </html>
